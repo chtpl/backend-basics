@@ -1,0 +1,7 @@
+.github/**
+.vscode/**
+.husky/**
+.nxignore
+tools/
+coverage/
+docker-data/

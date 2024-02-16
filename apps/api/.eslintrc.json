@@ -1,0 +1,20 @@
+{
+  "extends": ["../../.eslintrc.json", "plugin:@darraghor/nestjs-typed/recommended"],
+  "ignorePatterns": ["!**/*"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "@darraghor/nestjs-typed/injectable-should-be-provided": [
+          "error",
+          {
+            "filterFromPaths": ["node_modules", ".test.", ".spec."],
+            "src": ["apps/api/src/**/*.ts"]
+          }
+        ],
+        "@darraghor/nestjs-typed/api-method-should-specify-api-response": "off",
+      }
+    }
+  ],
+  "plugins": ["@darraghor/nestjs-typed"]
+}

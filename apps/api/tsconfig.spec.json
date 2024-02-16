@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc",
+    "module": "commonjs",
+    "types": ["jest", "node"],
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "lib": ["es2022"]
+  },
+  "include": ["jest.config.ts", "src/**/*.ts", "test/**/*.ts", "test/**/*.d.ts"]
+}

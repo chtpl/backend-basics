@@ -1,0 +1,45 @@
+{
+  "root": true,
+  "ignorePatterns": ["**/*"],
+  "plugins": ["@nx", "import"],
+  "extends": [
+    "plugin:import/typescript",
+    "plugin:@typescript-eslint/recommended",
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.base.json"
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": ["plugin:@nx/typescript"]
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "extends": ["plugin:@nx/javascript"]
+    },
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "curly": ["error", "all"],
+        "func-names": "error",
+        "import/extensions": "off",
+        "import/prefer-default-export": "off",
+        "max-len": [
+          "warn",
+          {
+            "code": 120,
+            "ignoreComments": true,
+            "ignorePattern": "^import .*",
+            "ignoreStrings": true,
+            "ignoreTemplateLiterals": true
+          }
+        ],
+        "no-console": "error",
+        "@typescript-eslint/await-thenable": "error",
+        "@typescript-eslint/no-floating-promises": "error",
+        "@typescript-eslint/no-misused-promises": "error",
+      }
+    }
+  ]
+}

@@ -1,1 +1,80 @@
-node_modules
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+migrations.json
+
+.nx/cache/**
+
+# apps/api/assets/version.json is changed during nx build of api. Prevent commiting these changes accidentally.
+.GIT_SHA
+**/**/app-version.json
+apps/api/src/assets/app-version.json
+
+# Furthermore, prevent commits of potential large, temporary files like pictures etc.
+**/*.jpg
+**/*.jpeg
+**/*.png
+!**/public/*.png
+**/*.bmp
+**/*.pdf
+**/*.docx
+**/*.doc
+**/*.mp4
+**/*.h264
+**/*.h265
+**/*.avi
+**/*.mkv
+**/*.mov
+**/*.log
+
+**/git-loc-only*
+**/docker-data/
+
+# compiled output
+**/dist
+**/tmp
+**/*.tmp
+**/out-tsc
+
+**/test-report.xml
+
+# dependencies
+**/node_modules
+
+# IDEs and editors
+/.idea
+**/.project
+**/.classpath
+**/.c9/
+*.launch
+**/.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+
+/typings
+.env*
+.husky/pre-commit
+.husky/commit-msg
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Next.js
+.next
+
+**/cypress/screenshots/*
+**/cypress/videos/*
+
+**/globalConfig.json
+.nx
