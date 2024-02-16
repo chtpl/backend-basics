@@ -1,0 +1,31 @@
+{
+  "name": "Baustein",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "devcontainer",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "shutdownAction": "stopCompose",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "vivaxy.vscode-conventional-commits",
+        "GitHub.vscode-github-actions",
+        "codezombiech.gitignore",
+        "eamodio.gitlens",
+        "MS-vsliveshare.vsliveshare",
+        "yzhang.markdown-all-in-one",
+        "mongodb.mongodb-vscode",
+        "christian-kohler.npm-intellisense",
+        "esbenp.prettier-vscode",
+        "redhat.vscode-yaml",
+        "ms-azuretools.vscode-docker",
+        "bradlc.vscode-tailwindcss",
+      ]
+    }
+  },
+  "features": {},
+  "forwardPorts": [3001, 4201, 5201],
+  "remoteEnv": {
+    "EDITOR": "nano"
+  },
+}

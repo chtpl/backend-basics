@@ -1,0 +1,39 @@
+version: '3.8'
+services:
+  devcontainer:
+    container_name: backend-basics-devcontainer
+    networks:
+      - backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ../..:/workspaces:cached
+      - /tmp/.X11-unix:/tmp/.X11-unix \
+      - ~/.cache:/root/.cache
+    command: sleep infinity
+    user: ${CURRENT_UID}
+    environment:
+      - DISPLAY=${IP}:0
+    ports:
+      - '127.0.0.1:5201:5200'
+      - '127.0.0.1:4201:4200'
+      - '127.0.0.1:3001:3000'
+
+  db:
+    image: mongo:7
+    container_name: mongodb
+    command: --setParameter notablescan=1
+    restart: unless-stopped
+    networks:
+      - backend
+    volumes:
+      - mongo-data:/data/db
+    ports:
+      - '127.0.0.1:27080:27017'
+
+volumes:
+  mongo-data:
+
+networks:
+  backend:
