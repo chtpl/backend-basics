@@ -1,5 +1,7 @@
 {
+  "name": "backend-basics",
   "devDependencies": {
+    "@nx/nest": "^18.0.4",
     "nx": "18.0.4"
   },
   "nx": {
