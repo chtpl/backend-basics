@@ -1,0 +1,38 @@
+{
+  "version": "6.0",
+  "nxVersion": "18.0.4",
+  "deps": {
+    "nx": "^18.0.4"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {},
+    "nonProjectFiles": [
+      {
+        "file": ".devcontainer/Dockerfile",
+        "hash": "3053629259430726794"
+      },
+      {
+        "file": ".devcontainer/devcontainer.json",
+        "hash": "7109885968412203250"
+      },
+      {
+        "file": ".devcontainer/docker-compose.yml",
+        "hash": "13293771197651150225"
+      },
+      {
+        "file": "nx.json",
+        "hash": "10332872168933253199"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "13734326649420785429"
+      },
+      {
+        "file": "package.json",
+        "hash": "17601878573171349839"
+      }
+    ]
+  }
+}
