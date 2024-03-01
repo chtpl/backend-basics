@@ -1,5 +1,5 @@
 {
-  "name": "Baustein",
+  "name": "backend-basics",
   "dockerComposeFile": "docker-compose.yml",
   "service": "devcontainer",
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",

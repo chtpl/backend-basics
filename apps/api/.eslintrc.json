@@ -1,4 +1,7 @@
 {
+  "parserOptions": {
+    "project": "./tsconfig.base.json"
+  },
   "extends": ["../../.eslintrc.json", "plugin:@darraghor/nestjs-typed/recommended"],
   "ignorePatterns": ["!**/*"],
   "overrides": [
